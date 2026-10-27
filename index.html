@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17122b">
+  <title>untungplayer.id — Top Up Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">✨ TOP UP LEBIH SERU, MAIN LEBIH PUAS — DEMO WEBSITE</div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="untungplayer.id beranda"><span class="brand-mark">u!</span><span>untungplayer<span class="dot">.id</span></span></a>
+    <nav><a href="#games">Game</a><a href="#cara">Cara Top Up</a></nav>
+    <div class="header-actions"><button class="cart-btn" id="cartJump">🛒 <span id="cartCount">0</span></button><button class="login-btn" id="openLogin">Masuk / Daftar</button><span class="user-pill hidden" id="userPill"></span></div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> TEMPAT TOP UP FAVORIT PLAYER</div>
+        <h1>Push rank.<br><span>Top up sat-set.</span></h1>
+        <p>Diamond, UC, dan item favoritmu. Pilih game, tentukan paket, lalu lanjutkan checkout dalam satu tempat.</p>
+        <div class="hero-buttons"><a class="primary-btn" href="#games">Mulai Top Up <span>↗</span></a><a class="secondary-btn" href="#cara">Cara kerja</a></div>
+        <div class="trust-row"><span>⚡ Proses praktis</span><span>🔒 Alur akun demo</span><span>🎮 Banyak game</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="spark s1">✦</div><div class="spark s2">✧</div><div class="spark s3">✦</div>
+        <div class="mochi" id="heroMochi"><div class="mochi-shine"></div><div class="face" id="mascotFace">^_^</div><div class="cheek left"></div><div class="cheek right"></div></div>
+        <div class="float-card float-top">💎 <div><b>Diamond</b><small>Waktunya push rank!</small></div></div>
+        <div class="float-card float-bottom"><span class="tiny-check">✓</span><div><b>Player happy!</b><small>Gas terus, jangan toxic 😎</small></div></div>
+        <div class="mascot-label">MOCHI DANSAl <span>• teman mabar kamu</span></div>
+      </div>
+    </section>
+    <section class="stats-strip"><div><b>01</b><span>Pilih game</span></div><div><b>02</b><span>Pilih paket</span></div><div><b>03</b><span>Checkout</span></div><div><b>04</b><span>Konfirmasi</span></div></section>
+    <section class="section" id="games">
+      <div class="section-head"><div><div class="eyebrow purple">KATALOG GAME</div><h2>Mau top up apa hari ini?</h2><p>Pilih game untuk melihat paket yang tersedia.</p></div><div class="search-wrap">⌕ <input id="gameSearch" placeholder="Cari game..." aria-label="Cari game"></div></div>
+      <div class="game-grid" id="gameGrid"></div>
+    </section>
+    <section class="section how-section" id="cara"><div class="eyebrow purple">GAMPANG BANGET</div><h2>Top up dalam 4 langkah</h2><div class="steps"><article><div>🎮</div><b>01. Pilih game</b><p>Pilih game dan paket item yang kamu inginkan.</p></article><article><div>🔐</div><b>02. Login dulu</b><p>Masuk ke akun demo sebelum menambahkan pesanan.</p></article><article><div>🧾</div><b>03. Isi data & bayar</b><p>Masukkan ID pemain, lalu pilih metode pembayaran.</p></article><article><div>✨</div><b>04. Selesaikan</b><p>Demo menampilkan status transaksi untuk simulasi alur.</p></article></div></section>
+    <section class="bottom-cta"><div><div class="eyebrow">SIAP MABAR?</div><h2>Petualanganmu, level berikutnya.</h2><p>Mochi Dansai sudah siap nemenin kamu.</p></div><button class="primary-btn" id="bottomShop">Pilih Game ↗</button><div class="mini-mochi">^_^</div></section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">u!</span><span>untungplayer<span class="dot">.id</span></span></a><p>© 2026 untungplayer.id · Prototype edukasi. Bukan layanan top up sungguhan.</p><span class="footer-mascot">◕‿◕</span></footer>
+
+  <div class="modal-backdrop hidden" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+    <div class="modal"><button class="close-modal" data-close="loginModal" aria-label="Tutup">×</button><div class="modal-mascot">^_^</div><div class="eyebrow purple">WELCOME, PLAYER!</div><h2 id="loginTitle">Masuk ke akunmu</h2><p class="muted">Login demo untuk mencoba alur pembelian.</p>
+      <form id="loginForm"><label>Email</label><input type="email" id="email" placeholder="player@email.com" required autocomplete="email"><label>Password</label><input type="password" id="password" placeholder="Minimal 6 karakter" minlength="6" required autocomplete="current-password"><div class="form-note">Demo lokal: jangan gunakan password asli. Akun tidak dikirim ke server.</div><button class="primary-btn full" type="submit">Masuk / Buat akun demo <span>→</span></button></form>
+    </div>
+  </div>
+  <div class="modal-backdrop hidden" id="packageModal" role="dialog" aria-modal="true" aria-labelledby="packageTitle"><div class="modal wide"><button class="close-modal" data-close="packageModal" aria-label="Tutup">×</button><div id="packageContent"></div></div></div>
+  <div class="modal-backdrop hidden" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle"><div class="modal wide"><button class="close-modal" data-close="checkoutModal" aria-label="Tutup">×</button><div class="eyebrow purple">CHECKOUT</div><h2 id="checkoutTitle">Selesaikan pesanan</h2><p class="muted">Isi ID pemain untuk tiap pesanan dan pilih pembayaran.</p><form id="checkoutForm"><div id="checkoutItems"></div><div class="payment-title">Metode pembayaran</div><div class="payment-grid"><label class="payment-option"><input type="radio" name="payment" value="QRIS" required><span>▦</span><b>QRIS</b><small>Simulasi</small></label><label class="payment-option"><input type="radio" name="payment" value="E-Wallet"><span>📱</span><b>E-Wallet</b><small>Simulasi</small></label><label class="payment-option"><input type="radio" name="payment" value="Virtual Account"><span>🏦</span><b>Virtual Account</b><small>Simulasi</small></label><label class="payment-option"><input type="radio" name="payment" value="Transfer Bank"><span>💳</span><b>Transfer Bank</b><small>Simulasi</small></label></div><div class="checkout-total"><span>Total demo</span><b id="checkoutTotal">Rp0</b></div><button class="primary-btn full" type="submit">Bayar & proses <span>→</span></button><p class="form-note">Tidak ada uang yang ditagihkan. Pembayaran hanya simulasi.</p></form></div></div>
+  <div class="modal-backdrop hidden" id="loadingModal" role="dialog" aria-modal="true"><div class="modal loading-box"><div class="loader-mochi">^_^</div><h2 id="loadingTitle">Menyiapkan transaksi...</h2><p id="loadingText" class="muted">Mochi sedang mengecek pesananmu.</p><div class="progress"><span></span></div></div></div>
+  <div class="modal-backdrop hidden" id="successModal" role="dialog" aria-modal="true" aria-labelledby="successTitle"><div class="modal success-box"><div class="success-icon">✓</div><div class="eyebrow purple">DEMO SELESAI</div><h2 id="successTitle">Transaksi berhasil!</h2><p class="muted">Ini hanya status simulasi, bukan bukti pembayaran atau pengiriman item sungguhan.</p><div class="receipt" id="receipt"></div><button class="primary-btn full" id="finishBtn">Kembali ke toko</button></div></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
